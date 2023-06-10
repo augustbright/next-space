@@ -1,3 +1,4 @@
+import { PageHeader } from "@/app/component/page-header";
 import find from "lodash/find";
 
 type TPost = {
@@ -26,9 +27,7 @@ export default async function Post({ params: { id } }: TProps) {
 
     return (
         <>
-            <header className="flex justify-center mt-4">
-                <h1 className="text-3xl">{post.title}</h1>
-            </header>
+            <PageHeader title={post.title} />
             <main className="flex justify-center mt-8">
                 <p>{post.content}</p>
             </main>

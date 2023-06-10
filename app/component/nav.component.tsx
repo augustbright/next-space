@@ -9,7 +9,12 @@ export const Nav = () => {
                     Next Space
                 </Link>
             </div>
-            <ul className="grow flex justify-end">
+            <ul className="grow flex justify-end gap-4">
+                <li>
+                    <Link href="/users">
+                        Users
+                    </Link>
+                </li>
                 <li>
                     <Link href="/about">
                         About
