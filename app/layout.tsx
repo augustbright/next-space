@@ -1,3 +1,4 @@
+import { Nav } from './component/nav.component'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -15,7 +16,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Nav />
+        <div className='container mx-auto min-h-screen'>
+          {children}
+        </div>
+        <footer>
+          <p className="text-sm italic">© 2023 Next Space. All rights reserved.</p>
+        </footer>
+      </body>
     </html>
   )
 }
