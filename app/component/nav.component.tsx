@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { AuthButton } from "./auth-button";
 
 export const Nav = () => {
     return (
-        <nav className="flex items-center justify-start bg-teal-500 p-6">
+        <nav className="flex gap-8 h-24 items-center justify-start bg-teal-500 p-6">
             <div>
                 <Link href="/">
                     Next Space
@@ -15,6 +16,9 @@ export const Nav = () => {
                     </Link>
                 </li>
             </ul>
+            <div className="flex justify-end">
+                <AuthButton />
+            </div>
         </nav>
     );
 };
