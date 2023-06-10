@@ -1,3 +1,5 @@
+import { prisma } from "@/app/prisma";
+import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { NextAuthOptions } from "next-auth";
 import NextAuth from "next-auth/next";
 import GrihubProvider from "next-auth/providers/github";
@@ -7,6 +9,7 @@ if (!process.env.GITHUB_CLIENT_ID || !process.env.GITHUB_CLIENT_SECRET) {
 }
 
 const options: NextAuthOptions = {
+    adapter: PrismaAdapter(prisma),
     providers: [
         GrihubProvider({
             clientId: process.env.GITHUB_CLIENT_ID,
