@@ -23,7 +23,7 @@ export const PostCard = ({ post, user }: TProps) => {
             )}
             <p className="mt-2 text-gray-600 dark:text-gray-300">{post.content}</p>
             <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                Posted on: {new Date(post.createdAt).toLocaleDateString()}
+                Posted on: {moment(post.createdAt).format('MMMM Do YYYY, h:mm:ss a')}
             </p>
         </div>
     );
