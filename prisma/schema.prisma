@@ -48,6 +48,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  posts         Post[]
 
   followers Follow[] @relation("followers")
   following Follow[] @relation("following")
@@ -69,4 +70,13 @@ model Follow {
   following User  @relation(fields: [followingId], references: [id], name: "followers")
 
   @@id([followerId, followingId])
+}
+
+model Post {
+  postId String @id @default(cuid())
+  authorId String
+  content String
+  createdAt DateTime @default(now())
+
+  author User @relation(fields: [authorId], references: [id])
 }

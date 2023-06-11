@@ -17,7 +17,7 @@ export default function About() {
                         <li><a href="https://nextjs.org/">Next.js 13</a> - Our core application framework</li>
                         <li><a href="https://authjs.dev/">Auth.js</a> - Secure user authentication</li>
                         <li><a href="https://www.prisma.io">Prisma</a> - Modern database access for TypeScript & Node.js</li>
-                        <li><a href="https://vercel.com/docs/storage/vercel-postgres">Vercel Postgres</a> - High-performance PostgreSQL hosting</li>
+                        <li><a href="https://neon.tech/">Neon Postgres</a> - High-performance PostgreSQL hosting</li>
                     </ul>
                 </section>
 
