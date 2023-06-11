@@ -1,6 +1,6 @@
 import { PageHeader } from "../component/page-header";
 import { prisma } from "../prisma";
-import { UserCard } from "./user-card";
+import { UserCard } from "../component/user-card";
 
 export default async function UsersPage() {
     const users = await prisma.user.findMany();

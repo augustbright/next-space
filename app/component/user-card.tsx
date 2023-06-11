@@ -9,7 +9,7 @@ export const UserCard = ({ user }: TProps) => {
     return (
         <Link href={`/users/${user.id}`}>
             <div className="border hover:border-teal-400 p-4 rounded-md shadow-lg max-w-md mx-auto">
-                {user.image && <Image src={user.image} width={32} height={32} alt={user.name || ''} className="h-24 w-24 rounded-full mx-auto" />}
+                {user.image && <Image src={user.image} width={200} height={200} alt={user.name || ''} className="h-24 w-24 rounded-full mx-auto" />}
                 <div className="mt-2 text-center">
                     <h2 className="text-lg font-semibold">{user.name || 'No Name'}</h2>
                     {user.age && <p className="text-gray-500">{`Age: ${user.age}`}</p>}

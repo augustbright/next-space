@@ -48,6 +48,9 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+
+  followers Follow[] @relation("followers")
+  following Follow[] @relation("following")
 }
 
 model VerificationToken {
@@ -56,4 +59,14 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model Follow {
+  followerId  String
+  followingId  String
+
+  follower  User  @relation(fields: [followerId], references: [id], name: "following")
+  following User  @relation(fields: [followingId], references: [id], name: "followers")
+
+  @@id([followerId, followingId])
 }
