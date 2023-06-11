@@ -1,6 +1,7 @@
 import { Post, User } from "@prisma/client";
 import moment from "moment";
 import Image from "next/image";
+import Link from "next/link";
 
 type TProps = {
     post: Post;
@@ -8,10 +9,12 @@ type TProps = {
 }
 export const PostCard = ({ post, user }: TProps) => {
     return (
-        <div className="p-4 my-2 bg-white rounded-md shadow-md dark:bg-gray-800 w-auto md:w-3/4">
-            <h2 className="text-lg font-bold dark:text-white">
-                {user.name || 'Anonymous'}
-            </h2>
+        <div className="my-2 bg-white rounded-md shadow-md dark:bg-gray-800 p-4 mx-4 sm:mx-24">
+            <Link href={`/users/${user.id}`}>
+                <h2 className="text-lg font-bold dark:text-white">
+                    {user.name || 'Anonymous'}
+                </h2>
+            </Link>
             {user.image && (
                 <Image
                     width={48}

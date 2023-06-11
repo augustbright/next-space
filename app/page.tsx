@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <main className="flex flex-col justify-between container">
       <PostForm />
-      <div className="flex flex-col gap-4 items-center">
+      <div className="flex flex-col gap-4">
         {posts.map((post) => (
           <PostCard key={post.postId} post={post} user={post.author} />
         ))}

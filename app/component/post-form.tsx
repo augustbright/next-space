@@ -19,7 +19,7 @@ export const PostForm = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit} className="flex flex-col items-center justify-between p-24">
+            <form onSubmit={handleSubmit} className="flex flex-col items-start justify-between p-4 sm:p-24">
                 <textarea
                     name="content"
                     className="w-full h-24 p-2 border border-gray-300 rounded-md text-black"
